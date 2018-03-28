@@ -1,10 +1,10 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
 using System.Text;
 using System.Linq;
 
 
-   public class CustomList<T> 
+public class CustomList<T>
 {
 
     public List<T> cList { get; set; }
@@ -13,31 +13,23 @@ using System.Linq;
     {
         cList = new List<T>();
     }
-                                    
+
 
     public void AddElement(T element)
     {
-        
+
         cList.Add(element);
     }
 
     public T RemoveElement(int index)
     {
-        try
-        {
-            cList.RemoveAt(index);
-        }
-        catch
-        {
-
-        }
-        
+        cList.RemoveAt(index);
         return cList[index];
     }
 
-    public	bool ContainsElement(T element)
+    public bool ContainsElement(T element)
     {
-       return this.cList.Contains(element);
+        return this.cList.Contains(element);
     }
 
     public void Swap(int index1, int index2)
@@ -60,7 +52,7 @@ using System.Linq;
         }
         return counter;
     }
-        public T Max()
+    public T Max()
     {
         return this.cList.Max();
     }
@@ -91,4 +83,3 @@ using System.Linq;
 
 
 }
-
